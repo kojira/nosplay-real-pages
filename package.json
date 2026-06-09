@@ -1,5 +1,5 @@
 {
-  "name": "nosplay-like",
+  "name": "nosplay-real-pages",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "idb-keyval": "^6.2.5",
+    "nostr-tools": "^2.23.5",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },

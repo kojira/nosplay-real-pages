@@ -103,15 +103,141 @@
   border-radius: var(--radius-sm);
 }
 
-/* ---------- Demo banner ---------- */
-.demo-banner {
-  background: rgba(255, 179, 71, 0.1);
-  border: 1px solid rgba(255, 179, 71, 0.35);
+/* ---------- Login panel ---------- */
+.login-panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 560px;
+  margin: 24px auto 0;
+}
+
+.login-panel h2 {
+  font-size: 17px;
+}
+
+.login-hint,
+.login-note {
+  color: var(--text-dim);
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.login-note {
+  color: var(--text-faint);
+  font-size: 12.5px;
+}
+
+.login-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.login-input {
+  flex: 1;
+  min-width: 220px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 13.5px;
+  font-family: var(--mono);
+}
+
+.login-error {
   color: var(--warn);
-  padding: 8px 14px;
+  font-size: 12.5px;
+  margin: 0;
+}
+
+/* ---------- Status line ---------- */
+.status-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 7px 12px;
   border-radius: var(--radius-sm);
   font-size: 12.5px;
-  text-align: center;
+}
+
+.status-meta {
+  color: var(--text-faint);
+  font-family: var(--mono);
+  font-size: 11.5px;
+}
+
+.sync-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+}
+
+/* ---------- Follow toggle dot ---------- */
+.ctrl.follow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.ctrl.follow.on {
+  background: var(--live-bg);
+  border-color: rgba(54, 211, 153, 0.5);
+  color: var(--live);
+}
+
+.ctrl.follow:disabled {
+  cursor: default;
+  opacity: 0.9;
+}
+
+.follow-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.follow-dot.grey {
+  background: var(--text-faint);
+}
+
+.follow-dot.green {
+  background: var(--live);
+  box-shadow: 0 0 8px 1px rgba(54, 211, 153, 0.6);
+}
+
+/* ---------- Composer note ---------- */
+.composer-note {
+  margin: 10px 0 0;
+  color: var(--text-faint);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.composer-note code {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  background: var(--bg-input);
+  padding: 1px 4px;
+  border-radius: 4px;
 }
 
 /* ---------- Stage layout ---------- */
